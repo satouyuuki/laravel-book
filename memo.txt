@@ -1,0 +1,12 @@
+テストに必要なことは何か？
+httpが200
+こんにちは！がある
+
+docker-compose run php php artisan make:test HomeTest
+docker-compose run php vendor/bin/phpunit tests/Feature/HomeTest.php
+
+hostがphpとmysqlで違うのでそれを記載する
+DB_HOST=mysql
+
+docker環境だとlaravel側の
+.envの値を書き換えないといけない
